@@ -1,0 +1,26 @@
+.container{
+    border: solid 4px rgb(186, 56, 247);
+    background-color: azure;
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px;
+    grid-auto-rows:200px;
+    grid-auto-flow: column;
+    gap: 20px;
+    width:fit-content;
+    padding: 20px;
+    background-color: aquamarine;
+    
+}
+.item{
+    border: solid 4px rgb(7, 87, 49);
+    font-size: 4rem;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    color: rgb(66, 66, 66);
+    font-weight: bolder;
+    z-index: 1;
+}
