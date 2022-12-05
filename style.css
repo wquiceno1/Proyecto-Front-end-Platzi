@@ -16,6 +16,12 @@ body {
 
 .menu {
     display: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.menu:hover {
+    transform: scale(1.1);
 }
 
 .logo {
@@ -25,6 +31,8 @@ body {
 .inactive {
     display: none;
 }
+
+/* styles navbar */
 
 nav {
     display: flex;
@@ -82,7 +90,14 @@ nav {
 
 .navbar-shopping-cart {
     position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
+
+.navbar-shopping-cart:hover {
+    transform: scale(1.1);
+}
+
 .navbar-shopping-cart div {
     position: absolute;
     top: -6px;
@@ -99,7 +114,6 @@ nav {
 }
 
 /* desktop menu */
-
 .desktop-menu {
     position: absolute;
     background-color: var(--white);
@@ -140,6 +154,171 @@ nav {
     margin-bottom: 18px;
 }
 
+/* mobile menu */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    padding: 18px;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    
+}
+.mobile-menu ul{
+    padding: 0;
+    margin: 22px 0 0 0;
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1){
+   border-bottom: solid 1px var(--very-light-pink);
+}
+
+.mobile-menu ul li{
+    margin-bottom: 22px;
+}
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+    color: var(--very-light-pink);
+}
+.sign-out {
+    color:var(--hospital-green) !important;
+    font-size: var(--sm);
+}
+.mobile-menu ul:last-child{
+   position: absolute;
+   bottom: 0;
+}
+
+/* aside product detail cart */
+.product-detail {            
+    width: 360px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+
+.my-order {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    position: relative;
+    font-size: var(--lg);
+    margin-bottom: 42px;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.title:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0.5rem;
+    background: url(./icons/flechita.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+}
+
+.my-order-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+.my-order-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+
+}
+
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order p span:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shopping-cart figure {
+    margin: 0;
+}
+
+.shopping-cart figure img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.shopping-cart p:nth-child(2) {
+    color: var(--very-light-pink);
+}
+
+.shopping-cart p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color:var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 @media(max-width: 640px){
     .menu {
@@ -149,6 +328,18 @@ nav {
         display: none;
     }
     .navbar-email {
+        display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .product-detail {
+        width: 100%;
+    }
+}
+
+@media(min-width: 640px){
+    .mobile-menu {
         display: none;
     }
 }
